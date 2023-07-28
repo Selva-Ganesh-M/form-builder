@@ -1,5 +1,7 @@
+import { ICategorizeQ } from "./categorize.q.model.d";
 import { EQuestionType } from "./../question.model.d";
 import { EQuestionType } from "../question.model";
+import { IModelDefaults } from "../../model";
 
 export interface ICategorizeQ {
   categorized: Array<{
@@ -17,3 +19,5 @@ export interface IWDCategorizeQ extends Partial<ICategorizeQ> {
   }>;
   unCategorized: Array<string>;
 }
+
+export interface ICategorizeQLean extends ICategorizeQ, IModelDefaults {}

@@ -7,6 +7,7 @@ import { customErrorHandler } from "./middleware/customErrorHandler";
 import { customLogger } from "./middleware/customLogger";
 import formRouter from "./routes/form.router";
 import { customError } from "./utils/customError";
+import { questionsRouter } from "./routes/questions.router";
 
 const server = express();
 
@@ -21,6 +22,7 @@ server.use(cors(corsOptions));
 // #region : routes
 
 server.use("/api/forms", formRouter);
+server.use("/api/questions", questionsRouter);
 
 server.get("/healthz", (req: Request, res: Response) => {
   res.json({
