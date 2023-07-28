@@ -1,8 +1,19 @@
-import { EQuestionType, IWDQuestionSchema } from "./question.model.d";
+import { IWDQuestionSchema } from "./question.model.d";
 import mongoose from "mongoose";
+
+export enum EQuestionType {
+  categorize = "categorize",
+  cloze = "cloze",
+  comprehension = "comprehension",
+}
 
 const questionSchema = new mongoose.Schema<IWDQuestionSchema>(
   {
+    questionRefId: {
+      type: String,
+      required: [true, "Question ref id is a required field."],
+      refPath: "questionType",
+    },
     questionType: {
       type: String,
       enum: [
@@ -12,18 +23,14 @@ const questionSchema = new mongoose.Schema<IWDQuestionSchema>(
       ],
       required: [true, "Question type must be provided."],
     },
-    questionRefId: {
-      type: String,
-      required: [true, "Question ref id is a required field."],
-    },
   },
   {
     timestamps: true,
   }
 );
 
-export const questionModel = mongoose.model("question", questionSchema);
+export const QuestionModel = mongoose.model("Question", questionSchema);
 
-type TQuestion = typeof questionModel;
+type TQuestion = typeof QuestionModel;
 
-interface IQuestionDoc extends TQuestion {}
+export interface IQuestionDoc extends TQuestion {}
