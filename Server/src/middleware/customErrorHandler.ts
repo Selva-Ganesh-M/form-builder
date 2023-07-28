@@ -18,6 +18,8 @@ export const customErrorHandler = async (
 
   // #endregion : data prep
 
+  console.log(statusCode, devMessage);
+
   res.status(statusCode).json({
     statusText: "failure",
     statusCode,

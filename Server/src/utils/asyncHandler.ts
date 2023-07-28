@@ -7,7 +7,6 @@ export const asyncHandler =
     const next = args[args.length - 1] as NextFunction;
     try {
       await cb(...args);
-      next();
     } catch (err) {
       next(err);
     }

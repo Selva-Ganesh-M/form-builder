@@ -5,6 +5,7 @@ import { envs } from "./config/EnvConfig";
 import connectToDb from "./config/connectToDb";
 import { customErrorHandler } from "./middleware/customErrorHandler";
 import { customLogger } from "./middleware/customLogger";
+import formRouter from "./routes/form.router";
 
 const server = express();
 
@@ -17,10 +18,20 @@ server.use(cors(corsOptions));
 // #endregion : initial-mw
 
 // #region : routes
+
+server.use("/api/forms", formRouter);
+
 server.get("/healthz", (req: Request, res: Response) => {
   res.json({
     status: 200,
     message: "server is healthy.",
+  });
+});
+
+server.get("*", (req: Request, res: Response) => {
+  res.status(404).json({
+    status: 404,
+    message: "Page Not Found",
   });
 });
 // #endregion : routes
