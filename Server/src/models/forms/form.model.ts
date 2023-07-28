@@ -25,8 +25,8 @@ const formSchema = new mongoose.Schema<IWDFormSchema>(
     },
     questions: [
       {
-        questionId: {
-          type: String,
+        _id: {
+          type: mongoose.Types.ObjectId,
           ref: "QuestionModel",
         },
         questionType: {
