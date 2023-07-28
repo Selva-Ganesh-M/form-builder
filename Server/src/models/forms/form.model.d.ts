@@ -20,4 +20,4 @@ export interface IWDFormSchema extends Partial<IFormSchema> {
   }>;
 }
 
-export interface IFormLeanDoc extends IModelDefaults {}
+export interface IFormLeanDoc extends IFormSchema, IModelDefaults {}

@@ -15,7 +15,28 @@ const getAllForms = asyncHandler(async (req: Request, res: Response) => {
   });
 });
 
-export const createForm = asyncHandler(
+const getSingleForm = asyncHandler(
+  async (req: Request<{ formId: string }>, res: Response) => {
+    if (!isValidMongoId(req.params.formId))
+      throw new customError(
+        404,
+        `get single form failed: invalid formId - ${req.params.formId}`
+      );
+    const form: IFormLeanDoc | null = await FormModel.findById(
+      req.params.formId
+    ).lean();
+    if (!form)
+      throw new customError(404, "get single form failed: form not found.");
+    res.status(200).json({
+      statusText: "success",
+      statusCode: 200,
+      message: "get single form success",
+      payload: form,
+    });
+  }
+);
+
+const createForm = asyncHandler(
   async (req: Request<{}, {}, IWDFormSchema>, res: Response) => {
     const prepForm = new FormModel(req.body);
     req.body.questions.forEach((question) => {
@@ -35,12 +56,12 @@ export const createForm = asyncHandler(
   }
 );
 
-export const deleteForm = asyncHandler(
+const deleteForm = asyncHandler(
   async (req: Request<{ formId: string }>, res: Response) => {
     const form = await FormModel.findByIdAndDelete(req.params.formId);
-    res.status(200).json({
+    res.status(202).json({
       statusText: "success",
-      statusCode: 200,
+      statusCode: 202,
       message: "form deleted",
       payload: form,
     });
@@ -53,4 +74,5 @@ export const formCtrl = {
   getAllForms,
   createForm,
   deleteForm,
+  getSingleForm,
 };

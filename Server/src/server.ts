@@ -6,6 +6,7 @@ import connectToDb from "./config/connectToDb";
 import { customErrorHandler } from "./middleware/customErrorHandler";
 import { customLogger } from "./middleware/customLogger";
 import formRouter from "./routes/form.router";
+import { customError } from "./utils/customError";
 
 const server = express();
 
@@ -28,11 +29,15 @@ server.get("/healthz", (req: Request, res: Response) => {
   });
 });
 
-server.get("*", (req: Request, res: Response) => {
+server.get("*", async (req: Request, res: Response) => {
   res.status(404).json({
     status: 404,
     message: "Page Not Found",
   });
+});
+
+server.use("*", async (req: Request, res: Response, next: NextFunction) => {
+  return next(new customError(404, "network request failed: page not found."));
 });
 // #endregion : routes
 
