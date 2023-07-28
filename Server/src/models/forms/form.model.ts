@@ -1,5 +1,6 @@
+import { QuestionModel } from "./../questions/question.model";
 import { EQuestionType } from "../questions/question.model";
-import { IFormSchema } from "./form.model.d";
+import { IWDFormSchema } from "./form.model.d";
 import mongoose from "mongoose";
 
 export enum EFormStatus {
@@ -7,7 +8,7 @@ export enum EFormStatus {
   submitted = "submitted",
 }
 
-const formSchema = new mongoose.Schema<IFormSchema>(
+const formSchema = new mongoose.Schema<IWDFormSchema>(
   {
     title: {
       type: String,
@@ -16,6 +17,7 @@ const formSchema = new mongoose.Schema<IFormSchema>(
     status: {
       type: String,
       enum: EFormStatus,
+      default: EFormStatus.pending,
     },
     headerImg: {
       type: String,
@@ -24,6 +26,10 @@ const formSchema = new mongoose.Schema<IFormSchema>(
     questions: [
       {
         questionId: {
+          type: String,
+          ref: "QuestionModel",
+        },
+        questionType: {
           type: String,
           enum: EQuestionType,
         },

@@ -9,11 +9,13 @@ export const customErrorHandler = async (
 ) => {
   let devMessage: string = error.message;
   let statusCode: number = 500;
+  let stack = null;
 
   // #region : data prep
   if (error instanceof customError) {
     devMessage = error.devMessage;
     statusCode = error.statusCode;
+    stack = error.stack;
   }
 
   // #endregion : data prep
@@ -25,5 +27,6 @@ export const customErrorHandler = async (
     statusCode,
     devMessage,
     message: error.message,
+    stack,
   });
 };

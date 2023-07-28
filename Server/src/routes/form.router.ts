@@ -5,4 +5,6 @@ const formRouter = express.Router();
 
 formRouter.get("/", formCtrl.getAllForms);
 
+formRouter.post("/create", formCtrl.createForm);
+
 export default formRouter;
