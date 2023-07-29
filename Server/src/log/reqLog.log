@@ -131,3 +131,12 @@ cd446d9d-0063-4f79-a1c9-c4fba2c7059e	Sat Jul 29 2023	GET	/api/questions/categori
 ac8c2b36-a3fb-4e90-8731-5296bccfd1fd	Sat Jul 29 2023	GET	/api/forms/	undefined
 21827436-2f0c-4920-a14d-93ea06bc9206	Sat Jul 29 2023	POST	/api/questions/categorizeQ/create/	undefined
 1a4b7106-c1f7-4227-8cfb-69691bee9137	Sat Jul 29 2023	POST	/api/forms/create	undefined
+4329e784-9ce0-45f6-ba58-2b129d06a796	Sun Jul 30 2023	POST	/api/questions/mcq/create	undefined
+6897fba8-4963-4db7-a699-0a5530763115	Sun Jul 30 2023	GET	/api/questions/mcq/64c55dd10784bacda6c23538	undefined
+b9a49e16-2a3c-48b7-a1bd-ecfcebb27c63	Sun Jul 30 2023	GET	/api/questions/mcq/64c55dd10784bacda6c23538	undefined
+b464fcbb-51e4-455a-b758-f9d862fd124f	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
+e0bdd9f9-1056-493e-8875-4afaad310995	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
+7e4ec6f6-b941-4f7b-b986-6a9d9be5b90d	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
+bcb851af-a6b7-428a-a1f7-9444f5cd6a60	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
+c36cab32-8c32-44ff-bdd6-f8e5727f0f36	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
+2d90bb4c-1813-4b19-80f0-e502edb6496d	Sun Jul 30 2023	GET	/api/questions/mcq/64c55dd10784bacda6c23538	undefined

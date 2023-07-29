@@ -18,6 +18,7 @@ const mcqSchema = new mongoose.Schema<IWDMcq<string | number>>({
   },
   answer: {
     type: mongoose.SchemaTypes.Mixed,
+    default: null,
   },
 });
 
