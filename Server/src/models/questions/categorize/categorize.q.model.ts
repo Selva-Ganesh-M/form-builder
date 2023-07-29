@@ -32,13 +32,20 @@ const categorizeQSchema = new mongoose.Schema<IWDCategorizeQ>(
       type: String,
       default: EQuestionType.categorize,
     },
+    image: {
+      type: String,
+      default: "",
+    },
   },
   {
     timestamps: true,
   }
 );
 
-export const CategorizeQModel = mongoose.model("Categorize", categorizeQSchema);
+export const CategorizeQModel = mongoose.model(
+  "CategorizedQ",
+  categorizeQSchema
+);
 
 export type TCategorizeQModel = typeof CategorizeQModel;
 export interface ICategorizeQModel extends TCategorizeQModel {}

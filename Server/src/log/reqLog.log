@@ -50,3 +50,13 @@ f2bd01fd-e1a5-4292-b16b-975c80e2b651	Sat Jul 29 2023	GET	/api/questions/categori
 d5665dd0-7066-4f93-936a-5a746784a75c	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
 b411b868-85fe-4e4d-aaff-7e1ea492c6a2	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
 b4969243-d6e5-4f06-ae67-fd80874f74b6	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+a8437d78-b128-4b9f-a7ba-85503cc5aeb9	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+4336ae8b-1a72-4bb8-a0cd-52238538ca57	Sat Jul 29 2023	POST	/api/questions/categorize/create	undefined
+802acc5d-7f57-44b2-acec-52bc7ca13a9c	Sat Jul 29 2023	POST	/api/questions/categorizeQ/create	undefined
+4b771380-9463-4f08-afbe-1be5d5c566cd	Sat Jul 29 2023	POST	/api/questions/categorizeQ/create	undefined
+6c54fdf6-e3af-4c24-a59e-d5d128844027	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+c0452f38-5f03-49f3-b94c-c7bf11f816ac	Sat Jul 29 2023	POST	/api/questions/categorizeQ/create	undefined
+07774f0c-75fe-4b54-830e-2a42a02bb105	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+dea1cd65-304e-49b4-a4f8-7a2c1e462e08	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+27127044-f90b-4ffb-94e5-2b8ad17cca96	Sat Jul 29 2023	GET	/api/questions/categorizeQ	undefined
+2dbb1cd3-3095-45f8-8921-383b39d47eb2	Sat Jul 29 2023	POST	/api/questions/categorizeQ/create	undefined

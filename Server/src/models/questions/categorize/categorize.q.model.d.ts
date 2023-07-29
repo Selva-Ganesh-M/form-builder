@@ -10,6 +10,7 @@ export interface ICategorizeQ {
   }>;
   unCategorized: Array<string>;
   type: EQuestionType.categorize;
+  image: String;
 }
 
 export interface IWDCategorizeQ extends Partial<ICategorizeQ> {
