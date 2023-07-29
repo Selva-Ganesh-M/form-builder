@@ -1,5 +1,8 @@
 import { QuestionModel } from "./../models/questions/question.model";
-import { IWDCategorizeQ } from "./../models/questions/categorize/categorize.q.model.d";
+import {
+  ICategorizeQLean,
+  IWDCategorizeQ,
+} from "./../models/questions/categorize/categorize.q.model.d";
 import { Request, Response } from "express";
 import { asyncHandler } from "../utils/asyncHandler";
 import { CategorizeQModel } from "../models/questions/categorize/categorize.q.model";
@@ -99,10 +102,43 @@ const deleteOne = asyncHandler(
   }
 );
 
+const update = asyncHandler(
+  async (
+    req: Request<{ qId: string }, {}, Partial<ICategorizeQLean>>,
+    res: Response
+  ) => {
+    const qId = req.params.qId;
+    if (!isValidMongoId(qId))
+      throw new customError(
+        404,
+        "update categorizeQ failed: invalid mongo ID."
+      );
+    const updatedModel = await CategorizeQModel.findByIdAndUpdate(
+      qId,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedModel)
+      throw new customError(
+        404,
+        "update CategorizeQModel failed: cateQ not found"
+      );
+    res.status(202).json({
+      statusText: "success",
+      statusCode: 202,
+      message: "cateQ updated",
+      payload: updatedModel,
+    });
+  }
+);
+
 export const cQCtrl = {
   getAll,
   getOne,
   deleteOne,
   create,
   get,
+  update,
 };
