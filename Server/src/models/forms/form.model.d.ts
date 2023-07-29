@@ -1,11 +1,10 @@
 import { IModelDefaults } from "../model";
-import { EQuestionType } from "../questions/question.model";
-import { EFormStatus } from "./form.model";
+import { EFormStatus, EQuestionTypes } from "./form.model";
 
 export interface IFormSchema {
   title: string;
   questions: Array<{
-    kind: EQuestionType;
+    kind: EQuestionTypes;
     questionRef: mongoose.Types.ObjectId;
   }>;
   status: EFormStatus;
@@ -15,7 +14,7 @@ export interface IFormSchema {
 export interface IWDFormSchema extends Partial<IFormSchema> {
   title: string;
   questions: Array<{
-    kind: EQuestionType;
+    kind: EQuestionTypes;
     questionRef: mongoose.Types.ObjectId;
   }>;
 }

@@ -30,7 +30,7 @@ const categorizeQSchema = new mongoose.Schema<IWDCategorizeQ>(
     },
     type: {
       type: String,
-      default: EQuestionTypes.CategorizeQModel,
+      default: EQuestionTypes.CategorizeQ,
     },
     image: {
       type: String,
@@ -43,7 +43,7 @@ const categorizeQSchema = new mongoose.Schema<IWDCategorizeQ>(
 );
 
 export const CategorizeQModel = mongoose.model(
-  "CategorizedQ",
+  "CategorizeQ",
   categorizeQSchema
 );
 

@@ -7,7 +7,7 @@ export enum EFormStatus {
 }
 
 export enum EQuestionTypes {
-  CategorizeQModel = "CategorizeQModel",
+  CategorizeQ = "CategorizeQ",
 }
 
 const formSchema = new mongoose.Schema<IWDFormSchema>(
@@ -29,7 +29,7 @@ const formSchema = new mongoose.Schema<IWDFormSchema>(
       {
         kind: {
           type: String,
-          enum: EQuestionTypes,
+          enum: ["CategorizeQ"],
         },
         questionRef: {
           type: mongoose.Types.ObjectId,

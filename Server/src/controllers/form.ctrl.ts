@@ -6,7 +6,9 @@ import isValidMongoId from "../utils/isValidMongoId";
 import { customError } from "../utils/customError";
 
 const getAllForms = asyncHandler(async (req: Request, res: Response) => {
-  const forms: Array<IFormLeanDoc> = await FormModel.find().lean();
+  const forms: Array<IFormLeanDoc> = await FormModel.find()
+    .populate("questions.questionRef")
+    .lean();
   return res.status(200).json({
     statusText: "success",
     statusCode: 200,
