@@ -1,5 +1,5 @@
 import { isNotEmpty } from "../../../utils/isNotEmpty";
-import { EQuestionType } from "../question.model";
+import { EQuestionTypes } from "../../forms/form.model";
 import { IWDCategorizeQ } from "./categorize.q.model.d";
 import mongoose from "mongoose";
 
@@ -30,7 +30,7 @@ const categorizeQSchema = new mongoose.Schema<IWDCategorizeQ>(
     },
     type: {
       type: String,
-      default: EQuestionType.categorize,
+      default: EQuestionTypes.CategorizeQModel,
     },
     image: {
       type: String,

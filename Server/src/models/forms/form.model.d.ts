@@ -5,8 +5,8 @@ import { EFormStatus } from "./form.model";
 export interface IFormSchema {
   title: string;
   questions: Array<{
-    _id: mongoose.Types.ObjectId;
-    questionType: EQuestionType;
+    kind: EQuestionType;
+    questionRef: mongoose.Types.ObjectId;
   }>;
   status: EFormStatus;
   headerImg: string;
@@ -15,8 +15,8 @@ export interface IFormSchema {
 export interface IWDFormSchema extends Partial<IFormSchema> {
   title: string;
   questions: Array<{
-    _id: mongoose.Types.ObjectId;
-    questionType: EQuestionType;
+    kind: EQuestionType;
+    questionRef: mongoose.Types.ObjectId;
   }>;
 }
 

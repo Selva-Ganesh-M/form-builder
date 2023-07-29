@@ -40,10 +40,10 @@ const createForm = asyncHandler(
   async (req: Request<{}, {}, IWDFormSchema>, res: Response) => {
     const prepForm = new FormModel(req.body);
     req.body.questions.forEach((question) => {
-      if (!isValidMongoId(question._id))
+      if (!isValidMongoId(question.questionRef))
         throw new customError(
           404,
-          `create form failed: form has invalid question ID - ${question._id}`
+          `create form failed: form has invalid question ID - ${question.questionRef}`
         );
     });
     const newForm = await prepForm.save();

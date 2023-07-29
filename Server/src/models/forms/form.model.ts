@@ -1,11 +1,13 @@
-import { QuestionModel } from "./../questions/question.model";
-import { EQuestionType } from "../questions/question.model";
 import { IWDFormSchema } from "./form.model.d";
 import mongoose from "mongoose";
 
 export enum EFormStatus {
   pending = "pending",
   submitted = "submitted",
+}
+
+export enum EQuestionTypes {
+  CategorizeQModel = "CategorizeQModel",
 }
 
 const formSchema = new mongoose.Schema<IWDFormSchema>(
@@ -25,13 +27,13 @@ const formSchema = new mongoose.Schema<IWDFormSchema>(
     },
     questions: [
       {
-        _id: {
-          type: mongoose.Types.ObjectId,
-          ref: "QuestionModel",
-        },
-        questionType: {
+        kind: {
           type: String,
-          enum: EQuestionType,
+          enum: EQuestionTypes,
+        },
+        questionRef: {
+          type: mongoose.Types.ObjectId,
+          refPath: "questions.kind",
         },
       },
     ],
