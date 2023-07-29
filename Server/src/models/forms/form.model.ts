@@ -29,7 +29,7 @@ const formSchema = new mongoose.Schema<IWDFormSchema>(
       {
         kind: {
           type: String,
-          enum: ["CategorizeQ"],
+          enum: EQuestionTypes,
         },
         questionRef: {
           type: mongoose.Types.ObjectId,
