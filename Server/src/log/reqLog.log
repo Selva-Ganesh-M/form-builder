@@ -140,3 +140,12 @@ e0bdd9f9-1056-493e-8875-4afaad310995	Sun Jul 30 2023	PATCH	/api/questions/mcq/up
 bcb851af-a6b7-428a-a1f7-9444f5cd6a60	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
 c36cab32-8c32-44ff-bdd6-f8e5727f0f36	Sun Jul 30 2023	PATCH	/api/questions/mcq/update/64c55dd10784bacda6c23538	undefined
 2d90bb4c-1813-4b19-80f0-e502edb6496d	Sun Jul 30 2023	GET	/api/questions/mcq/64c55dd10784bacda6c23538	undefined
+36fe7a65-2b51-4aa2-a84c-d16abd555488	Sun Jul 30 2023	POST	/api/questions/mca/create	undefined
+b6e2c8fa-1fcc-461e-9d57-b2030ea23e94	Sun Jul 30 2023	POST	/api/questions/mca/create	undefined
+c15db7a6-4af1-4f4f-bc35-607220ce7bdb	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+f517ed37-82a0-4c35-b354-1b3ed844ddfd	Sun Jul 30 2023	GET	/api/questions/mca/64c5765ac89cef5a9390e510	undefined
+8c26e023-d58b-4d7b-98f8-5bc527919e4d	Sun Jul 30 2023	GET	/api/questions/mca/64c5765ac89cef5a9390e510	undefined
+f791d140-c8f8-4e78-91d5-0c7c86b03671	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+e98494c0-3f24-4039-be94-938af4e5b783	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+c409c16d-1e51-4655-86b0-e3d5c6aa70da	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+d7b4eec7-25d1-44d9-b335-c9c36932170b	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
