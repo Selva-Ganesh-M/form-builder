@@ -12,7 +12,7 @@ const stSchema = new mongoose.Schema<IWDSt>({
   },
 });
 
-export const stModel = mongoose.model("StQ", stSchema);
+export const StModel = mongoose.model("StQ", stSchema);
 
-type TStModel = typeof stModel;
+type TStModel = typeof StModel;
 export interface IStModel extends TStModel {}

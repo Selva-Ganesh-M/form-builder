@@ -149,3 +149,17 @@ f791d140-c8f8-4e78-91d5-0c7c86b03671	Sun Jul 30 2023	PATCH	/api/questions/mca/up
 e98494c0-3f24-4039-be94-938af4e5b783	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
 c409c16d-1e51-4655-86b0-e3d5c6aa70da	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
 d7b4eec7-25d1-44d9-b335-c9c36932170b	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+d98f65f5-eb96-4312-b646-d9db1f421367	Sun Jul 30 2023	POST	/api/questions/mca/create	undefined
+bdd6dd46-8238-42ab-9311-3a1c1c4495fd	Sun Jul 30 2023	POST	/api/questions/st/create	undefined
+a0409cc5-0fb7-4b74-a1db-09dc9906ea55	Sun Jul 30 2023	GET	/api/questions/st/64c5f99918f56efa5da0c12d	undefined
+b53af1e1-cc14-4625-ad26-953ac1b5348e	Sun Jul 30 2023	DELETE	/api/questions/mca/delete/64c5f99918f56efa5da0c12d	undefined
+c272d580-ef25-4bee-9ecc-fe9d3c10d574	Sun Jul 30 2023	DELETE	/api/questions/st/delete/64c5f99918f56efa5da0c12d	undefined
+e8288bac-509a-4786-bd19-f98e40eef523	Sun Jul 30 2023	GET	/api/questions/st/64c5f99918f56efa5da0c12d	undefined
+c28a2d20-bcc7-452f-9162-13a2f68f63e7	Sun Jul 30 2023	PATCH	/api/questions/mca/update/64c5765ac89cef5a9390e510	undefined
+33ef7005-594b-405e-9d0c-68337b8e173b	Sun Jul 30 2023	PATCH	/api/questions/st/update/64c5765ac89cef5a9390e510	undefined
+d25588cd-1b1a-46c8-ba21-39f88e645994	Sun Jul 30 2023	GET	/api/questions/st/64c5f99918f56efa5da0c12d	undefined
+9f3d5a86-37db-4f9e-aaaf-f549845914c1	Sun Jul 30 2023	POST	/api/questions/st/create	undefined
+a9c32eaf-c793-44c4-9433-a87df604db59	Sun Jul 30 2023	GET	/api/questions/st/64c5fc76e50c115939a0d60e	undefined
+cf52589c-711b-43c7-9d21-43d7a5b44d8c	Sun Jul 30 2023	PATCH	/api/questions/st/update/64c5fc76e50c115939a0d60e	undefined
+8c7289da-b098-4f84-90c2-b1f25f86df45	Sun Jul 30 2023	PATCH	/api/questions/st/update/64c5fc76e50c115939a0d60e	undefined
+4cd20868-0572-49f5-a918-ab18d2566351	Sun Jul 30 2023	PATCH	/api/questions/st/update/64c5fc76e50c115939a0d60e	undefined
