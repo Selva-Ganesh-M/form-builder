@@ -51,36 +51,6 @@ const get = asyncHandler(
   }
 );
 
-// const getAll = asyncHandler(async (req: Request, res: Response) => {
-//   const questions = await CategorizeQModel.find().lean();
-//   res.status(200).json({
-//     statusText: "success",
-//     statusCode: 200,
-//     message: "fetched all categorize",
-//     payload: questions,
-//   });
-// });
-
-// const getOne = asyncHandler(
-//   async (req: Request<{}, {}, {}, { qId: string }>, res: Response) => {
-//     const { qId } = req.query;
-//     if (!isValidMongoId(qId))
-//       throw new customError(
-//         400,
-//         "get one categorized question failed: invalid question id."
-//       );
-//     const question = await CategorizeQModel.findById(qId).lean();
-//     if (!question)
-//       throw new customError(404, "get one cQ failed: question not found");
-//     res.status(200).json({
-//       statusText: "success",
-//       statusCode: 200,
-//       message: "fetched one categorized question",
-//       payload: question,
-//     });
-//   }
-// );
-
 const deleteOne = asyncHandler(
   async (req: Request<{}, {}, {}, { qId: string }>, res: Response) => {
     const { qId } = req.query;

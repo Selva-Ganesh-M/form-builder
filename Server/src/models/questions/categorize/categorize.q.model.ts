@@ -1,40 +1,67 @@
-import { isNotEmpty } from "../../../utils/isNotEmpty";
-import { EQuestionTypes } from "../../forms/form.model";
 import { IWDCategorizeQ } from "./categorize.q.model.d";
 import mongoose from "mongoose";
 
 const categorizeQSchema = new mongoose.Schema<IWDCategorizeQ>(
   {
-    categorized: {
+    question: {
+      type: String,
+      required: [true, "categorizedQ must have question attribute."],
+    },
+    expectedSolution: {
       type: [
         {
+          _id: false,
           category: {
             type: String,
+            required: [
+              true,
+              "every categorized set must have a category name.",
+            ],
           },
-          items: [
-            {
-              type: String,
-            },
-          ],
+          items: {
+            type: [String],
+            required: [
+              true,
+              "every categorized set must contain at least on item.",
+            ],
+          },
         },
       ],
-      validate: [isNotEmpty, "Categories list can't be empty"],
+      required: true,
+      validate: {
+        validator: (expectedSolution: Array<any>) => expectedSolution.length,
+        message: (data) => "expected solution can't be empty",
+      },
     },
-    unCategorized: {
+    currentSolution: {
       type: [
         {
-          type: String,
+          _id: false,
+          category: {
+            type: String,
+            required: [
+              true,
+              "every categorized set must have a category name.",
+            ],
+          },
+          items: {
+            type: [String],
+            required: [
+              true,
+              "every categorized set must contain at least on item.",
+            ],
+          },
         },
       ],
-      validate: [isNotEmpty, "Category Items can't be empty"],
-    },
-    type: {
-      type: String,
-      default: EQuestionTypes.CategorizeQ,
+      default: [],
     },
     image: {
       type: String,
       default: "",
+    },
+    type: {
+      type: String,
+      default: "CategorizeQ",
     },
   },
   {

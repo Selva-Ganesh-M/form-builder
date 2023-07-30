@@ -7,7 +7,14 @@ import { customError } from "../utils/customError";
 
 const getAllForms = asyncHandler(async (req: Request, res: Response) => {
   const forms: Array<IFormLeanDoc> = await FormModel.find()
-    .populate("questions.questionRef")
+    // .populate("questions.questionRef")
+    // .populate("questions.questionRef.compQuestions.questionRef")
+    .populate({
+      path: "questions.questionRef",
+      populate: {
+        path: "compQuestions.questionRef",
+      },
+    })
     .lean();
   return res.status(200).json({
     statusText: "success",
@@ -26,7 +33,9 @@ const getSingleForm = asyncHandler(
       );
     const form: IFormLeanDoc | null = await FormModel.findById(
       req.params.formId
-    ).lean();
+    )
+      .populate("questions.questionRef")
+      .lean();
     if (!form)
       throw new customError(404, "get single form failed: form not found.");
     res.status(200).json({

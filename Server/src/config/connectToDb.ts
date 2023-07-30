@@ -6,7 +6,11 @@ export default async () => {
   try {
     await mongoose.connect(envs.MONGO_URI);
   } catch (err) {
-    console.log(`failed to connect to Mongo DB`);
+    if (err instanceof Error) {
+      console.log(`failed to connect to Mongo DB`, err.message);
+    } else {
+      console.log(`failed to connect to Mongo DB`);
+    }
     throw err;
   }
 };
